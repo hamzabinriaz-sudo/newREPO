@@ -23,7 +23,7 @@
     "nan": "^2.15.0",
     "react-scripts": "^5.0.0",
     "typescript": "^3.9.10",
-    "babel-eslint": "^10.1.0"  // <-- Add this line
+    "babel-eslint": "^10.1.0" 
   },
   "eslintConfig": {
     "extends": "react-app"
