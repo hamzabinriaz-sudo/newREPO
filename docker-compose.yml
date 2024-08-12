@@ -1,0 +1,18 @@
+﻿version: '3.8'
+
+services:
+  reactapp:
+    build: .
+    container_name: react_app_container
+    ports:
+      - "80:80"
+    networks:
+      - frontend
+    environment:
+      - VIRTUAL_HOST=reactapp.local
+      - LETSENCRYPT_HOST=reactapp.local
+      - LETSENCRYPT_EMAIL=your-email@example.com
+
+networks:
+  frontend:
+    driver: bridge
