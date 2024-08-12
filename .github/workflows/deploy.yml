@@ -31,4 +31,4 @@ jobs:
         fi
     
     - name: Run Docker container
-      run: docker run -d --name your-container -p 8080:80 yourdockerhubusername/yourimagename:latest
+      run: docker run -d --name your-container -p 8080:80 hamzabinriaz/your-image-name:latest
