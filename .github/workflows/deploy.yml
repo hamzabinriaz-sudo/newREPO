@@ -32,6 +32,15 @@ jobs:
     
     - name: Run Docker container
       run: docker run -d --name your-container -p 80:80 hamzabinriaz/your-image-name:latest
-    - name: sleep
+    
+    - name: Sleep for 30 seconds
       run: sleep 30
-     
+    
+    - name: Check container health
+      run: |
+        if curl --fail http://localhost:80; then
+          echo "Container is healthy."
+        else
+          echo "Container is not healthy. Exiting."
+          exit 1
+        fi
